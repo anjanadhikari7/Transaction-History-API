@@ -11,3 +11,7 @@ export const getTransactions = (userId) => {
 export const createTransaction = (transObj) => {
   return transactionSchema(transObj).save();
 };
+
+export const deleteSelectedIds = (selectedIds = []) => {
+  return transactionSchema.deleteMany({ _id: { $in: selectedIds } });
+};
