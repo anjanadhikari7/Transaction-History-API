@@ -13,11 +13,11 @@ const transactionSchema = new mongoose.Schema({
     type: Date,
     required: true,
   },
-  Amount: {
+  amount: {
     type: Number,
     required: true,
   },
-  userID: {
+  userId: {
     type: mongoose.Schema.Types.ObjectId,
     required: true,
     ref: "user",
